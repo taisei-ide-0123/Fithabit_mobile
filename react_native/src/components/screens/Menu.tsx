@@ -2,11 +2,13 @@ import React from 'react';
 import {Layout, Text, Button} from '@ui-kitten/components';
 import {StyleSheet} from 'react-native';
 
-const Menu = () => {
+const Menu = ({navigation}) => {
   return (
     <Layout style={styles.container}>
       <Text>Menu</Text>
-      <Button>Menu</Button>
+      <Button onPress={() => navigation.navigate('Profile')}>
+        Go to Profile
+      </Button>
     </Layout>
   );
 };

@@ -2,11 +2,11 @@ import React from 'react';
 import {Layout, Text, Button} from '@ui-kitten/components';
 import {StyleSheet} from 'react-native';
 
-const Record = () => {
+const Record = ({navigation}) => {
   return (
     <Layout style={styles.container}>
       <Text>Record</Text>
-      <Button>Record</Button>
+      <Button onPress={() => navigation.navigate('Menu')}>Go to Menu</Button>
     </Layout>
   );
 };

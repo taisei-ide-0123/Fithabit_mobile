@@ -2,11 +2,13 @@ import React from 'react';
 import {Layout, Text, Button} from '@ui-kitten/components';
 import {StyleSheet} from 'react-native';
 
-const Ranking = () => {
+const Ranking = ({navigation}) => {
   return (
     <Layout style={styles.container}>
       <Text>Ranking</Text>
-      <Button>Ranking</Button>
+      <Button onPress={() => navigation.navigate('Record')}>
+        Go to Record
+      </Button>
     </Layout>
   );
 };
