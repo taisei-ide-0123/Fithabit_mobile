@@ -16,7 +16,14 @@ const App = () => {
   return (
     <ApplicationProvider {...eva} theme={{...eva.light, ...theme}}>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: {backgroundColor: '#e83838'},
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}>
           <Stack.Screen name="Menu" component={Menu} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="Ranking" component={Ranking} />

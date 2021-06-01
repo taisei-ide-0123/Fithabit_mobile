@@ -9,6 +9,10 @@ const Ranking = ({navigation}) => {
       <Button onPress={() => navigation.navigate('Record')}>
         Go to Record
       </Button>
+      <Button onPress={() => navigation.goBack()}>Go back</Button>
+      <Button onPress={() => navigation.popToTop()}>
+        Go back to first screen in stack
+      </Button>
     </Layout>
   );
 };
