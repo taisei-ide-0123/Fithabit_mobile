@@ -7,6 +7,7 @@ const Record = ({navigation}) => {
     <Layout style={styles.container}>
       <Text>Record</Text>
       <Button onPress={() => navigation.navigate('Menu')}>Go to Menu</Button>
+      <Button onPress={() => navigation.goBack()}>Go back</Button>
     </Layout>
   );
 };

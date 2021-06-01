@@ -9,6 +9,7 @@ const Profile = ({navigation}) => {
       <Button onPress={() => navigation.navigate('Ranking')}>
         Go to Ranking
       </Button>
+      <Button onPress={() => navigation.goBack()}>Go back</Button>
     </Layout>
   );
 };
