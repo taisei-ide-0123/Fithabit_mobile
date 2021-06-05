@@ -1,9 +1,11 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Menu from '../screens/Menu';
-import Profile from '../screens/Ranking';
-import Ranking from '../screens/Ranking';
-import Record from '../screens/Record';
+import Squat from '../screens/Squat';
+import PushUp from '../screens/PushUp';
+import PullUp from '../screens/PullUp';
+import ArmCurl from '../screens/ArmCurl';
+import ShoulderRaise from '../screens/ShoulderRaise';
 
 const Stack = createStackNavigator();
 
@@ -18,9 +20,11 @@ const StackNavigation = () => {
         },
       }}>
       <Stack.Screen name="Menu" component={Menu} />
-      <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="Ranking" component={Ranking} />
-      <Stack.Screen name="Record" component={Record} />
+      <Stack.Screen name="Squat" component={Squat} />
+      <Stack.Screen name="PushUp" component={PushUp} />
+      <Stack.Screen name="PullUp" component={PullUp} />
+      <Stack.Screen name="ArmCurl" component={ArmCurl} />
+      <Stack.Screen name="ShoulderRaise" component={ShoulderRaise} />
     </Stack.Navigator>
   );
 };

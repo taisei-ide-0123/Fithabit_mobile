@@ -1,15 +1,11 @@
 import React from 'react';
-import {Layout, Text, Button} from '@ui-kitten/components';
+import {Layout, Text} from '@ui-kitten/components';
 import {StyleSheet} from 'react-native';
 
-const Profile = ({navigation}) => {
+const Profile = () => {
   return (
     <Layout style={styles.container}>
       <Text>Profile</Text>
-      <Button onPress={() => navigation.navigate('Ranking')}>
-        Go to Ranking
-      </Button>
-      <Button onPress={() => navigation.goBack()}>Go back</Button>
     </Layout>
   );
 };
