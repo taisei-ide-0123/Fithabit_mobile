@@ -2,10 +2,10 @@ import React from 'react';
 import {Layout, Text} from '@ui-kitten/components';
 import {StyleSheet} from 'react-native';
 
-const Record = () => {
+const PushUp = () => {
   return (
     <Layout style={styles.container}>
-      <Text>Record</Text>
+      <Text>Push Up</Text>
     </Layout>
   );
 };
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Record;
+export default PushUp;

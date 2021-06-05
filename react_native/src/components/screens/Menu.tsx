@@ -1,24 +1,84 @@
 import React from 'react';
-import {Layout, Button} from '@ui-kitten/components';
-import {StyleSheet} from 'react-native';
-import Squat from '../Menu/Squat';
-import PushUp from '../Menu/PushUp';
-import PullUp from '../Menu/PullUp';
-import ArmCurl from '../Menu/ArmCurl';
-import ShoulderRaise from '../Menu/ShoulderRaise';
+import {Layout} from '@ui-kitten/components';
+import {StyleSheet, View, Image, ScrollView} from 'react-native';
+import {Button, Card} from '@ui-kitten/components';
 
 const Menu = ({navigation}) => {
   return (
-    <Layout style={styles.container}>
-      <Squat />
-      <PushUp />
-      <PullUp />
-      <ArmCurl />
-      <ShoulderRaise />
-      <Button onPress={() => navigation.navigate('Profile')}>
-        Go to Profile
-      </Button>
-    </Layout>
+    <ScrollView>
+      <Layout style={styles.container}>
+        <Card style={styles.card}>
+          <Image
+            source={require('../Images/Squat.jpg')}
+            style={styles.imageSize}
+          />
+          <View style={styles.footerContainer}>
+            <Button
+              onPress={() => navigation.navigate('Squat')}
+              style={styles.footerControl}
+              size="small">
+              PLAY!
+            </Button>
+          </View>
+        </Card>
+        <Card style={styles.card}>
+          <Image
+            source={require('../Images/PushUp.jpg')}
+            style={styles.imageSize}
+          />
+          <View style={styles.footerContainer}>
+            <Button
+              onPress={() => navigation.navigate('PushUp')}
+              style={styles.footerControl}
+              size="small">
+              PLAY!
+            </Button>
+          </View>
+        </Card>
+        <Card style={styles.card}>
+          <Image
+            source={require('../Images/PullUp.jpg')}
+            style={styles.imageSize}
+          />
+          <View style={styles.footerContainer}>
+            <Button
+              onPress={() => navigation.navigate('PullUp')}
+              style={styles.footerControl}
+              size="small">
+              PLAY!
+            </Button>
+          </View>
+        </Card>
+        <Card style={styles.card}>
+          <Image
+            source={require('../Images/ArmCurl.jpg')}
+            style={styles.imageSize}
+          />
+          <View style={styles.footerContainer}>
+            <Button
+              onPress={() => navigation.navigate('ArmCurl')}
+              style={styles.footerControl}
+              size="small">
+              PLAY!
+            </Button>
+          </View>
+        </Card>
+        <Card style={styles.card}>
+          <Image
+            source={require('../Images/ShoulderRaise.jpg')}
+            style={styles.imageSize}
+          />
+          <View style={styles.footerContainer}>
+            <Button
+              onPress={() => navigation.navigate('ShoulderRaise')}
+              style={styles.footerControl}
+              size="small">
+              PLAY!
+            </Button>
+          </View>
+        </Card>
+      </Layout>
+    </ScrollView>
   );
 };
 
@@ -27,6 +87,22 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  card: {
+    display: 'flex',
+    justifyContent: 'center',
+    margin: 2,
+  },
+  footerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  footerControl: {
+    margin: 10,
+  },
+  imageSize: {
+    width: 350,
+    height: 200,
   },
 });
 
